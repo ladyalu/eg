@@ -1,0 +1,25 @@
+{
+    "name": "esper-genesis-foundryvtt",
+    "title": "Esper Gensis for 5e",
+    "description": "A system for playing Esper Genesis Sci fi in the Foundry Virtual Table Top",
+    "version": "0.0.1",
+    "author": "ladyalu",
+    "scripts": [],
+    "esmodules": ["eg.js"],
+    "styles": ["eg.css"],
+    "packs": [],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "socket": true,
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "attributes.hp",
+    "secondaryTokenAttribute": null,
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9"
+}
