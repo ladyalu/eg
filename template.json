@@ -38,22 +38,22 @@
                     "width": null,
                     "units": "",
                     "type": ""
-                  },
-                  "range": {
+                },
+                "range": {
                     "value": null,
                     "long": null,
                     "units": ""
-                  },
-                  "uses": {
+                },
+                "uses": {
                     "value": 0,
                     "max": 0,
                     "per": null
-                  },
-                  "consume": {
+                },
+                "consume": {
                     "type": "",
                     "target": null,
                     "amount": null
-                  } 
+                } 
             },
             "action": {
                 "ability": null,
@@ -153,8 +153,18 @@
             "rank": 1,
             "domain": "",
             "components": {
+                "technique": false,
+                "talent": false,
                 "conventional": false,
                 "concentration": false
+            },
+            "preparation": {
+                "mode": "prepared",
+                "prepared": false
+            }, 
+            "scaling": {
+                "mode": "none",
+                "formula": null
             }
         },
         "weapon": {
