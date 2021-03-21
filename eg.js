@@ -20,7 +20,7 @@ Hooks.once("init", function() {
     //---ActorSensesConfig.unregisterSheet("core", ActorSheet);
 
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("esper-genesis-foundryvtt", ItemSheetEG, {
+    Items.registerSheet("eg", ItemSheetEG, {
         makeDefault: true,
         label: "EG.SheetClassItem"
     });

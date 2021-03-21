@@ -9,7 +9,7 @@ export default class ItemSheetEG extends ItemSheet {
     /* getTemplate */
     /**@override */
     get template() {
-        const path = "systems/esper-genesis-foundryvtt/templates/items/";
+        const path = "systems/eg/templates/items/";
         return `${path}/${this.item.data.type}.html`;
       }
 
