@@ -1,3 +1,13 @@
 {
-    "EG.ItemName": "Item Name"
+    "EG.Description": "Description",
+    "EG.Details": "Details",
+    "EG.Effects": "Effects",
+    "EG.ItemName": "Item Name",
+    "Eg.ItemWeaponDetails": "Weapon Details",
+    "EG.ItemWeaponType": "Weapon Type",
+    "EG.Price": "Price",
+    "EG.Quantity": "Quantity",
+    "EG.Rarity": "Rarity",
+    "EG.Source": "Source",
+    "EG.Weight": "Weight"
 }
