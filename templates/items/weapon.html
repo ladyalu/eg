@@ -35,27 +35,7 @@
         <a class="item" data-tab="effects">{{ localize "EG.Effects" }}</a>
     </nav>
 
-    {{!--Item Sheet Body --}}
-    <section class="sheet-body">
+    {{!-- Description Tab --}}
+    {{> "systems/eg/templates/items/parts/item-description.html"}}
 
-        {{!-- Description Tab --}}
-        <!--{{> "systems/eg/templates/items/parts/item-description.html"}}-->
-
-        {{!-- Details Tab --}}
-        <div class="tab details" data-group="primary" data-tab="details">
-            <h3 class="form-header">{{ localize "EG.ItemWeaponDetails" }}</h3>
-
-            {{!-- Weapon Type --}}
-            <div class="form-group">
-                <label>{{ localize "EG.ItemWeaponType" }}</label>
-                <select name="data.weaponType">
-                    {{#select data.weaponType}}
-                    {{#each config.weaponTypes as |name type|}}
-                    <option value="{{type}}">{{name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-        </div>
-    </section>
 </form>

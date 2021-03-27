@@ -5,6 +5,10 @@
  * Software License: GNU GPLv3
  */
 
+//Import Modules
+import { EG } from "./module/config.js";
+import {preloadHandlebarsTemplates } from "./module/templates.js";
+
 // Import Applications
 import ItemSheetEG from "./module/item/sheet.js";
 
@@ -14,7 +18,7 @@ import ItemSheetEG from "./module/item/sheet.js";
 /* --------------------------------------------- */
 
 Hooks.once("init", function() {
-    console.log(`EG | Initializing Esper Genesis Game System\n`);
+    console.log(`EG | Initializing Esper Genesis Game System\n${EG.ASCII}`);
 
     //Register sheet application classes
     //---ActorSensesConfig.unregisterSheet("core", ActorSheet);
