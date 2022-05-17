@@ -3,7 +3,7 @@
 
     },
     "Item": {
-        "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "power", "feat", "backpack"],
+        "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "subclass", "power", "feat", "backpack"],
         "templates": {
             "itemDescription": {
                 "description": {
@@ -38,53 +38,60 @@
                     "width": null,
                     "units": "",
                     "type": ""
-                  },
-                  "range": {
+                },
+                "range": {
                     "value": null,
-                    "long": null,
+                    "long" : null,
                     "units": ""
-                  },
-                  "uses": {
-                    "value": 0,
-                    "max": 0,
+                },
+                "uses": {
+                    "value": null,
+                    "max": "",
                     "per": null
-                  },
-                  "consume": {
+                },
+                "consume": {
                     "type": "",
                     "target": null,
                     "amount": null
-                  } 
+                } 
             },
             "action": {
                 "ability": null,
                 "actionType": null,
                 "attackBonus": 0,
                 "chatFlavor": "",
-                "critical": null,
+                "critical": {
+                    "threshold": null,
+                    "damage": ""
+                },
                 "damage": {
-                  "parts": [],
-                  "versatile": ""
+                    "parts": [],
+                    "versatile": ""
                 },
                 "formula": "",
                 "save": {
-                  "ability": "",
-                  "dc": null,
-                  "scaling": "spell"
+                    "ability": "",
+                    "dc": null,
+                    "scaling": "power"
                 }
             },
             "mountable": {
                 "armor": {
-                  "value": 10
+                    "value": 10
                 },
                 "hp": {
-                  "value": 0,
-                  "max": 0,
-                  "dt": null,
-                  "conditions": ""
+                    "value": 0,
+                    "max": 0,
+                    "dt": null,
+                    "conditions": ""
                 }
             }
         },
         "htmlFields": ["description.value", "description.chat", "description.unidentified"],
+        "backgrounds": {
+            "templates":["itemDescription"],
+            "advancement": []
+        },
         "backpack": {
             "templates": ["itemDescription", "physicalItem"],
             "capacity": {
@@ -98,34 +105,39 @@
         },
         "class": {
             "templates": ["itemDescription"],
+            "identifier": "",
             "levels": 1,
-            "subclass": "",
             "hitDice": "d6",
             "hitDiceUsed": 0,
+            "advancement": [],
             "skills": {
                 "number": 2,
                 "choices": [],
                 "value": []
             },
-            "esperpowers": "none"
+            "esperpowers": {
+                "progression": "none",
+                "ability": ""
+            }
         },
         "consumable": {
             "templates": ["itemDescription", "physicalItem", "activatedEffect", "action"],
             "consumableType": "potion",
             "uses": {
-              "autoDestroy": false
+            "autoDestroy": false
             }
         },
         "equipment": {
             "templates": ["itemDescription", "physicalItem", "activatedEffect", "action", "mountable"],
             "armor": {
-              "type": "light",
-              "value": 10,
-              "dex": null
+                "type": "light",
+                "value": null,
+                "dex": null
             },
+            "baseItem": "",
             "speed": {
-              "value": null,
-              "conditions": ""
+                "value": null,
+                "conditions": ""
             },
             "strength": 0,
             "stealth": false,
@@ -135,8 +147,8 @@
             "templates": ["itemDescription", "activatedEffect", "action"],
             "requirements": "",
             "recharge": {
-              "value": null,
-              "charged": false
+                "value": null,
+                "charged": false
             }
         },
         "loot": {
@@ -144,9 +156,12 @@
         },
         "tool": {
             "templates": ["itemDescription", "physicalItem"],
+            "toolType": "",
+            "baseItem": "",
             "ability": "int",
             "chatFlavor": "",
-            "proficient": 0
+            "proficient": 0,
+            "bonus": ""
         },
         "power": {
             "templates": ["itemDescription", "activatedEffect", "action"],
@@ -155,6 +170,15 @@
             "components": {
                 "conventional": false,
                 "concentration": false
+            },
+            "method" : ["Talent", "Forging"],
+            "preparation": {
+                "mode": "prepared",
+                "prepared": false
+            },
+            "scaling": {
+                "mode": "none",
+                "formula": null
             }
         },
         "weapon": {
